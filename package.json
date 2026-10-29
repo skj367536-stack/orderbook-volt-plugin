@@ -1,0 +1,49 @@
+{
+  "name": "orderbook-volt-plugin",
+  "version": "0.0.4",
+  "description": "Orderbook volt theme plugin for Orderly Network DEX. Real-time orderbook visualization with custom voltage styling.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "scripts",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "configSchema.json",
+    "tsup.config.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup && node scripts/postbuild.js",
+    "postinstall": "node scripts/setup.js",
+    "prepare": "node scripts/setup.js || true",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "@orderly.network/hooks": "3.0.4-alpha.2",
+    "@orderly.network/plugin-core": "3.0.4-alpha.2",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@orderly.network/core": "3.0.4-alpha.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skj367536-stack/orderbook-volt-plugin.git"
+  },
+  "keywords": [
+    "orderly",
+    "orderbook",
+    "plugin",
+    "theme",
+    "dex",
+    "trading"
+  ]
+}
